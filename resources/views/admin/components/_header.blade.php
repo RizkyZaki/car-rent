@@ -6,11 +6,9 @@
             class="icon ni ni-menu"></em></a>
       </div>
       <div class="nk-header-brand d-xl-none">
-        <a href="javascript:void(0);" class="logo-link">
-          <span class="logo-dark logo-img">
-            <h3><img class="aling-logo-header" src="{{ asset('storage/assets/site/logo/' . appSetting()->logo) }}">
-            </h3>
-          </span>
+        <a href="{{ url('dashboard/overview') }}" class="logo-link">
+          <h4 class="erp">Dashboard</h4>
+          <span>Rentalpedia</span>
         </a>
       </div>
       <div class="nk-header-search ms-3 ms-xl-0">
@@ -39,24 +37,23 @@
 
                   <div class="user-avatar">
                     <span>
-                      {{-- {{ getInitial(auth()->user()->name) }}</span> --}}
-                      {{ getInitial('Rex Orange') }}</span>
+                      {{ getInitial(auth()->user()->name) }}</span>
                   </div>
 
                   <div class="user-info">
-                    {{-- <span class="lead-text">{{ auth()->user()->name }}</span>
-                    <span class="sub-text">{{ auth()->user()->email }}</span> --}}
+                    <span class="lead-text">{{ auth()->user()->name }}</span>
+                    <span class="sub-text">{{ auth()->user()->email }}</span>
                   </div>
                 </div>
               </div>
-              {{-- <div class="dropdown-inner">
+              <div class="dropdown-inner">
                 <ul class="link-list">
-                  <li><a href="{{ url('dashboard/acc-settings') }}"><em
-                        class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
+                  {{-- <li><a href="{{ url('dashboard/acc-settings') }}"><em
+                        class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li> --}}
                   <li><a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a>
                   </li>
                 </ul>
-              </div> --}}
+              </div>
               <div class="dropdown-inner">
                 <ul class="link-list">
                   <li><a href="{{ url('logout') }}"><em class="icon ni ni-signout"></em><span>Log Out</span></a></li>
