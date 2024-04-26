@@ -1,5 +1,7 @@
 @extends('admin.layout.main')
-
+@php
+  $benefits = json_decode(appSetting()->benefit, true);
+@endphp
 @section('content-admin')
   <div class="container-fluid">
     <div class="nk-content-inner">
@@ -157,6 +159,9 @@
                       <div class="form-control-wrap">
                         <select class="form-select tags-select2" data-placeholder="Benefit" name="benefit[]"
                           multiple="multiple" required>
+                          @foreach ($benefits as $benefit)
+                            <option value="{{ $benefit }}" selected>{{ $benefit }}</option>
+                          @endforeach
                         </select>
                       </div>
                     </div>

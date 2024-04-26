@@ -3,10 +3,10 @@
     <div class="nk-sidebar-brand">
       <a href="javascript:void(0);" class="logo-link nk-sidebar-logo">
         <span class="logo-dark logo-img">
-          <h4><img class="aling-logo-landscape" src="{{ asset('storage/assets/site/logo/' . appSetting()->logo) }}"></h4>
+          <h4><img class="aling-logo-landscape" src="{{ asset('storage/assets/logo/' . appSetting()->logo) }}"></h4>
         </span>
         <span class="logo-small logo-img logo-img-small">
-          <h4><img class="aling-logo-small" src="{{ asset('storage/assets/site/logo/' . appSetting()->logo) }}"></h4>
+          <h4><img class="aling-logo-small" src="{{ asset('storage/assets/logo/' . appSetting()->logo) }}"></h4>
         </span>
       </a>
     </div>
@@ -47,9 +47,15 @@
             </a>
           </li>
           <li class="nk-menu-item">
-            <a href="{{ url('dashboard/inform/brand-car') }}" class="nk-menu-link">
+            <a href="{{ url('dashboard/inform/brand') }}" class="nk-menu-link">
               <span class="nk-menu-icon"><em class="icon ni ni-swap-alt-fill"></em></span>
               <span class="nk-menu-text">Brand Car</span>
+            </a>
+          </li>
+          <li class="nk-menu-item">
+            <a href="{{ url('dashboard/inform/profile') }}" class="nk-menu-link">
+              <span class="nk-menu-icon"><em class="icon ni ni-swap-alt-fill"></em></span>
+              <span class="nk-menu-text">Profile</span>
             </a>
           </li>
           <li class="nk-menu-heading">

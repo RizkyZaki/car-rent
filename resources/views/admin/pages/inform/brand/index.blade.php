@@ -93,7 +93,7 @@
             </div>
             <div class="form-group col-md-12">
               <label class="form-label">Image</label>
-              <input type="text" class="form-control" name="image" placeholder="image" id="image" readonly>
+              <input type="file" class="form-control" name="image" placeholder="image" id="image">
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@
             </div>
             <div class="form-group col-md-12">
               <label class="form-label">Image</label>
-              <input type="text" class="form-control" name="image" placeholder="image" id="image">
+              <input type="file" class="form-control" name="image" placeholder="image" id="image">
               <input type="hidden" id="id" name="id">
             </div>
 

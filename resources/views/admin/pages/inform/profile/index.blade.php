@@ -97,7 +97,7 @@
               <label class="form-label">Slug</label>
               <input type="text" class="form-control" name="slug" placeholder="Slug" id="slug" readonly>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
               <label class="form-label">Description</label>
               <textarea type="text" class="form-control summernote" name="description" placeholder="description" id="description"></textarea>
             </div>
@@ -131,10 +131,9 @@
               <input type="text" class="form-control" name="slug" placeholder="Slug" id="newSlug" readonly>
               <input type="hidden" id="oldSlug" name="id">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
               <label class="form-label">Description</label>
-              <textarea type="text" class="form-control summernote" name="description" placeholder="description"
-                id="description"></textarea>
+              <textarea name="description" class="form-control" placeholder="description"></textarea>
             </div>
 
           </div>

@@ -16,6 +16,9 @@ function texteditor() {
         ],
     });
 }
+$(document).ready(function () {
+    texteditor();
+});
 function createTextSlug() {
     var name = $("#name").val();
     $("#slug").val(generateSlug(name));
@@ -103,9 +106,28 @@ $(document).on("click", ".update", function (e) {
         success: function (response) {
             if (response.status === "true") {
                 let data = response.data;
-                console.log(data.name);
                 $('#change-modal input[name="name"]').val(data.name);
-                $('#change-modal textarea[name="textarea"]').val(data.textarea);
+                $('#change-modal textarea[name="description"]')
+                    .val(data.description)
+                    .summernote({
+                        placeholder: "Description",
+                        tabsize: 2,
+                        height: 150,
+                        toolbar: [
+                            ["style", ["style"]],
+                            ["font", ["bold", "italic", "underline", "clear"]],
+                            [
+                                "font",
+                                ["strikethrough", "superscript", "subscript"],
+                            ],
+                            ["fontname", ["fontname"]],
+                            ["fontsize", ["fontsize"]],
+                            ["color", ["color"]],
+                            ["para", ["ul", "ol", "paragraph"]],
+                            ["height", ["height"]],
+                        ],
+                    });
+
                 $('#change-modal input[name="slug"]').val(data.slug);
 
                 // Menyimpan slug asli sebelum pembaruan
