@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
@@ -34,6 +35,7 @@ class CategoryController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
+            'image' => 'required|image',
         ]);
 
         if ($validator->fails()) {
@@ -46,10 +48,13 @@ class CategoryController extends Controller
                 'icon' => 'error'
             ]);
         }
-
+        $hashImg = md5($request->image);
+        $eks =  $request->image->getClientOriginalExtension();
+        $request->image->storeAs('assets/image', $hashImg . '.' . $eks);
         $data = [
             'name' => $request->name,
             'slug' => $request->slug,
+            'image' => $hashImg,
         ];
 
         Category::create($data);
@@ -93,6 +98,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $cr = Category::find($id);
         $validator = Validator::make($request->all(), [
             'name' => 'required',
         ]);
@@ -111,8 +117,16 @@ class CategoryController extends Controller
             'name' => $request->name,
             'slug' => $request->slug,
         ];
+        if ($request->image) {
+            Storage::delete('assets/image/' . $cr->image);
+            $hashImg = md5($request->image);
+            $eks =  $request->image->getClientOriginalExtension();
+            $request->image->storeAs('assets/image', $hashImg . '.' . $eks);
+            $data['image'] = $hashImg . '.' . $eks;
+        }
 
-        Category::find($id)->update($data);
+
+        $cr->update($data);
         return response()->json([
             'status' => 'true',
             'title' => 'Success',
@@ -128,6 +142,9 @@ class CategoryController extends Controller
     {
         $cat = Category::where('slug', $slug)->first();
         if ($cat) {
+            if ($cat->image) {
+                Storage::delete('assets/image/' . $cat->image);
+            }
             $cat->delete();
 
             return response()->json([

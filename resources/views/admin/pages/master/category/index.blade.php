@@ -97,6 +97,10 @@
               <label class="form-label">Slug</label>
               <input type="text" class="form-control" name="slug" placeholder="Slug" id="slug" readonly>
             </div>
+            <div class="form-group col-md-12">
+              <label class="form-label">Image</label>
+              <input type="file" class="form-control" name="image" placeholder="image" id="image">
+            </div>
           </div>
         </div>
         <div class="modal-footer bg-light">
@@ -118,8 +122,8 @@
           <div class="row">
             <div class="form-group col-md-12">
               <label class="form-label">Category <small class="text-danger">*</small></label>
-              <input type="text" class="form-control" onkeyup="createTextSlugUpdate()" id="newName" name="name"
-                placeholder="Category">
+              <input type="text" class="form-control" onkeyup="createTextSlugUpdate()" id="newName"
+                name="name" placeholder="Category">
               <input type="hidden" name="id">
             </div>
             <div class="form-group col-md-12">
@@ -127,7 +131,10 @@
               <input type="text" class="form-control" name="slug" placeholder="Slug" id="newSlug" readonly>
               <input type="hidden" id="oldSlug" name="id">
             </div>
-
+            <div class="form-group col-md-12">
+              <label class="form-label">Image</label>
+              <input type="file" class="form-control" name="image" placeholder="image" id="image">
+            </div>
           </div>
         </div>
         <div class="modal-footer bg-light">

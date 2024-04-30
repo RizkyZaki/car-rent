@@ -11,4 +11,8 @@ class Rent extends Model
     use HasFactory, SoftDeletes;
     protected $table = 'rent';
     protected $guarded = ['id'];
+    public function post()
+    {
+        return $this->belongsTo(PostCar::class, 'id_post_car');
+    }
 }

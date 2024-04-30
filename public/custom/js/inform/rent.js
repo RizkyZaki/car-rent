@@ -1,26 +1,9 @@
-let path = "dashboard/master/category";
-function createTextSlug() {
-    var name = $("#name").val();
-    $("#slug").val(generateSlug(name));
-}
+let path = "dashboard/inform/rent";
 
-function createTextSlugUpdate() {
-    var newName = $("#newName").val();
-    $("#newSlug").val(generateSlug(newName));
-}
-
-function generateSlug(text) {
-    return text
-        .toString()
-        .toLowerCase()
-        .replace(/^-+/, "")
-        .replace(/-+$/, "")
-        .replace(/\s+/g, "-")
-        .replace(/\-\-+/g, "-")
-        .replace(/[^\w\-]+/g, "");
-}
 $(document).on("click", ".create", function (e) {
     e.preventDefault();
+    let id = $(this).data("id");
+    $('#add-modal input[name="id"]').val(id);
     $("#add-modal").modal("show");
 });
 
@@ -28,13 +11,13 @@ $(document).on("click", ".add", function (e) {
     // console.log('test');
     $("div.spanner").addClass("show");
     $("div.overlay").addClass("show");
-    let name = $('#add-modal input[name="name"]').val();
-    let slug = $('#add-modal input[name="slug"]').val();
-    let image = $('#add-modal input[name="image"]').prop("files")[0];
+    let rent = $('#add-modal input[name="rent"]').val();
+    let fee = $('#add-modal input[name="fee"]').val();
+    let id = $('#add-modal input[name="id"]').val();
     let form = new FormData();
-    form.append("name", name);
-    form.append("slug", slug);
-    form.append("image", image);
+    form.append("fee", fee);
+    form.append("rent", rent);
+    form.append("id_post_car", id);
     $.ajax({
         url: `${baseUrl}/${path}`,
         method: "POST",
@@ -79,26 +62,22 @@ $(document).on("click", ".add", function (e) {
 });
 $(document).on("click", ".update", function (e) {
     e.preventDefault();
-    let slug = $(this).data("slug");
+    let id = $(this).data("id");
     $.ajax({
-        url: `${baseUrl}/${path}/${slug}/edit`,
+        url: `${baseUrl}/${path}/${id}/edit`,
         method: "GET",
         success: function (response) {
             if (response.status === "true") {
                 let data = response.data;
-                console.log(data.name);
-                $('#change-modal input[name="name"]').val(data.name);
-                $('#change-modal input[name="slug"]').val(data.slug);
-                $('#change-modal input[name="image"]').val(data.image);
-
-                // Menyimpan slug asli sebelum pembaruan
+                $('#change-modal input[name="rent"]').val(data.rent);
+                $('#change-modal input[name="fee"]').val(data.fee);
                 $('#change-modal input[name="id"]').val(data.id);
 
                 $("#change-modal").modal("show");
             } else {
                 Swal.fire(
                     "Error",
-                    "An error occurred while retrieving Category data.",
+                    "An error occurred while retrieving FAQ data.",
                     "error"
                 );
             }
@@ -106,7 +85,7 @@ $(document).on("click", ".update", function (e) {
         error: function () {
             Swal.fire(
                 "Error",
-                "An error occurred while retrieving Category data.",
+                "An error occurred while retrieving FAQ data.",
                 "error"
             );
         },
@@ -117,14 +96,12 @@ $(document).on("click", ".save", function (e) {
     e.preventDefault();
     $("div.spanner").addClass("show");
     $("div.overlay").addClass("show");
-    let name = $('#change-modal input[name="name"]').val();
+    let rent = $('#change-modal input[name="rent"]').val();
     let id = $('#change-modal input[name="id"]').val();
-    let slug = $('#change-modal input[name="slug"]').val();
-    let image = $('#change-modal input[name="image"]').prop("files")[0];
+    let fee = $('#change-modal input[name="fee"]').val();
     let form = new FormData();
-    form.append("name", name);
-    form.append("slug", slug);
-    form.append("image", image);
+    form.append("rent", rent);
+    form.append("fee", fee);
     form.append("_method", "PUT");
 
     $.ajax({

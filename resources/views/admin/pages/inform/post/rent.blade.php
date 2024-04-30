@@ -14,7 +14,7 @@
                   <p>{{ $heading }}</p>
                 </div>
                 <div class="nk-block-head-content">
-                  <a href="{{ url('dashboard/inform/blog/create') }}" class="btn btn-primary create"><em
+                  <a href="{{ url('dashboard/inform/post-car/create') }}" class="btn btn-primary create"><em
                       class="icon ni ni-plus"></em> <span> Add</span></a>
                 </div>
               </div>
@@ -28,8 +28,8 @@
                     <th class="nk-tb-col nk-tb-col-check">
                       #
                     </th>
-                    <th class="nk-tb-col">Blog</th>
-                    <th class="nk-tb-col tb-col-mb">Created Date</th>
+                    <th class="nk-tb-col">Sewa</th>
+                    <th class="nk-tb-col tb-col-mb">Harga</th>
                     <th class="nk-tb-col nk-tb-col-tools text-end"></th>
                   </tr>
                 </thead>
@@ -42,8 +42,8 @@
                       <td class="nk-tb-col">
                         {{ $no++ }}
                       </td>
-                      <td class="nk-tb-col"><span class="">{{ $item->title }}</span></td>
-                      <td class="nk-tb-col tb-col-mb"><span class="">{{ timesInd($item->created_at) }}</span>
+                      <td class="nk-tb-col"><span class="">{{ $item->rent }}</span></td>
+                      <td class="nk-tb-col tb-col-mb"><span class="">{{ formatIDR($item->fee) }}</span>
                       </td>
                       <td class="nk-tb-col nk-tb-col-tools">
                         <ul class="nk-tb-actions gx-1">
@@ -53,10 +53,9 @@
                                 data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
                               <div class="dropdown-menu dropdown-menu-end">
                                 <ul class="link-list-opt no-bdr">
-                                  <li><a href="{{ url('dashboard/inform/blog/' . $item->slug . '/edit') }}"><em
-                                        class="icon ni ni-pen"></em><span>Edit</span></a>
-                                  </li>
-                                  <li><a href="javascript:void(0);" data-url="inform/blog"
+                                  <li><a href="javascript:void(0);" data-id={{ $item->id }} class="update"><em
+                                        class="icon ni ni-pen"></em><span>Edit</span></a></li>
+                                  <li><a href="javascript:void(0);" data-url="inform/rent"
                                       data-identity={{ $item->id }} class="delete"><em
                                         class="icon ni ni-trash"></em><span>Delete</span></a>
                                   </li>
@@ -77,10 +76,41 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" tabindex="-1" id="change-modal">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <em class="icon ni ni-cross"></em>
+        </a>
+        <div class="modal-header">
+          <h5 class="modal-title">Ubah Sewa</h5>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-group col-md-12">
+              <label class="form-label">Sewa <small class="text-danger">*</small></label>
+              <input type="text" class="form-control" id="rent" name="rent" placeholder="1 Hari">
+              <input type="hidden" name="id">
+            </div>
+            <div class="form-group col-md-12">
+              <label class="form-label">Biaya</label>
+              <input type="text" class="form-control" name="fee" placeholder="fee" id="fee">
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer bg-light">
+          <button class="btn save btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   @push('customJs')
     <script>
       let csrfToken = $('meta[name="csrf-token"]').attr("content");
     </script>
     <script src="{{ asset('custom/js/utils/delete.js') }}"></script>
+    <script src="{{ asset('custom/js/inform/rent.js') }}"></script>
   @endpush
 @endsection

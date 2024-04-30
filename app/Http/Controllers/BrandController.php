@@ -105,9 +105,6 @@ class BrandController extends Controller
             'name' => 'required',
         ]);
 
-        $data = [
-            'name' => $request->name,
-        ];
         if ($validator->fails()) {
             $errors = $validator->errors()->all();
 
@@ -118,11 +115,15 @@ class BrandController extends Controller
                 'icon' => 'error'
             ]);
         }
+        $data = [
+            'name' => $request->name,
+        ];
         if ($request->image) {
             Storage::delete('assets/image/' . $br->image);
             $hashImg = md5($request->image);
             $eks =  $request->image->getClientOriginalExtension();
             $request->image->storeAs('assets/image', $hashImg . '.' . $eks);
+            $data['image'] = $hashImg . '.' . $eks;
         }
         $br->update($data);
         return response()->json([
