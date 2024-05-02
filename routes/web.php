@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PostCarController;
@@ -13,9 +14,6 @@ use App\Http\Controllers\SettingsController;
 use App\Models\PostCar;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('logout', [AuthController::class, 'logout']);
 
@@ -41,4 +39,15 @@ Route::prefix('dashboard')->group(function () {
         Route::get('settings', [SettingsController::class, 'index']);
         Route::post('settings', [SettingsController::class, 'store']);
     });
+});
+
+
+Route::controller(ClientController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+    Route::get('/blog', 'blog')->name('blog');
+    Route::get('/post', 'post')->name('post');
+    Route::get('/post/{slug}', 'postDetail')->name('postDetail');
+    Route::get('/blog/{slug}', 'blogDetail')->name('blogDetail');
+    Route::get('/category/{slug}', 'categoryDetail')->name('categoryDetail');
+    Route::get('/{slug}', 'profileDetail')->name('profileDetail');
 });
