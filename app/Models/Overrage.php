@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Overrage extends Model
 {
     use HasFactory;
+    protected $table = 'overrage';
+    protected $guarded = ['id'];
 }

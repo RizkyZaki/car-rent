@@ -39,17 +39,11 @@ class SettingsController extends Controller
         if ($request->hasFile('logo')) {
             $hashLogo = md5($request->logo);
             $eks =  $request->logo->getClientOriginalExtension();
-            $request->logo->storeAs('assets/logo', $hashLogo . '.' . $eks);
+            $request->logo->storeAs('assets/image', $hashLogo . '.' . $eks);
             $data['logo'] = $hashLogo . '.' . $eks;
         }
 
         // Simpan file overrage_image jika ada
-        if ($request->hasFile('overrage_image')) {
-            $hashImg = md5($request->overrage_image);
-            $eks =  $request->overrage_image->getClientOriginalExtension();
-            $request->overrage_image->storeAs('assets/overrage_image', $hashImg . '.' . $eks);
-            $data['overrage_image'] = $hashImg . '.' . $eks;
-        }
         $benefitData = [];
         $benefits = explode(',', $validatedData['benefit']);
         foreach ($benefits as $index => $value) {

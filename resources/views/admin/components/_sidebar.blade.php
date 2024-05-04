@@ -58,6 +58,12 @@
               <span class="nk-menu-text">Profile</span>
             </a>
           </li>
+          <li class="nk-menu-item">
+            <a href="{{ url('dashboard/inform/overrage') }}" class="nk-menu-link">
+              <span class="nk-menu-icon"><em class="icon ni ni-info"></em></span>
+              <span class="nk-menu-text">Overrage</span>
+            </a>
+          </li>
           <li class="nk-menu-heading">
             <h6 class="overline-title text-primary-alt">Master</h6>
           </li>

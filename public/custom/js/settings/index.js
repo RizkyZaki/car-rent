@@ -15,7 +15,6 @@ $(document).on("click", ".save", function (e) {
     let email = $('input[name="email"]').val();
     let text_copyright = $('input[name="text_copyright"]').val();
     let logo = $('input[name="logo"]').prop("files")[0];
-    let overrage_image = $('input[name="overrage_image"]').prop("files")[0];
     let benefit = $('select[name="benefit[]"]').val();
     let form = new FormData();
     form.append("name", name);
@@ -27,7 +26,6 @@ $(document).on("click", ".save", function (e) {
     form.append("contact_phone", contact_phone);
     form.append("email", email);
     form.append("text_copyright", text_copyright);
-    form.append("overrage_image", overrage_image);
     form.append("benefit", benefit);
     $.ajax({
         url: `${baseUrl}/${path}`,

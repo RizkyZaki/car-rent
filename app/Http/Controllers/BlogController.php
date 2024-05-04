@@ -54,7 +54,7 @@ class BlogController extends Controller
         ]);
 
         $eks = $request->file('photo')->getClientOriginalExtension();
-        $request->file('photo')->storeAs('assets/blog', md5($request->file('photo')) . '.' . $eks);
+        $request->file('photo')->storeAs('assets/image', md5($request->file('photo')) . '.' . $eks);
         Blog::create([
             'title' => $request->title,
             'slug' => $request->slug,
@@ -103,9 +103,9 @@ class BlogController extends Controller
             'slug.required' => 'Deskripsi Tidak Boleh Kosong',
         ]);
         if ($request->file('photo')) {
-            Storage::delete('assets/blog/' . $blog->photo);
+            Storage::delete('assets/image/' . $blog->photo);
             $eks = $request->file('photo')->getClientOriginalExtension();
-            $request->file('photo')->storeAs('assets/blog', md5($request->file('photo')) . '.' . $eks);
+            $request->file('photo')->storeAs('assets/image', md5($request->file('photo')) . '.' . $eks);
             $blog->photo = md5($request->file('photo')) . '.' . $eks;
         }
         $blog->title = $request->title;
@@ -126,7 +126,7 @@ class BlogController extends Controller
 
         if ($post) {
             if ($post->image) {
-                Storage::delete('assets/blog/' . $post->image);
+                Storage::delete('assets/image/' . $post->image);
             }
             $post->delete();
 

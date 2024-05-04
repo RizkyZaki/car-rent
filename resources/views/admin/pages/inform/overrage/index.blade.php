@@ -27,7 +27,7 @@
                     <th class="nk-tb-col nk-tb-col-check">
                       #
                     </th>
-                    <th class="nk-tb-col">Brand</th>
+                    <th class="nk-tb-col">Title</th>
                     <th class="nk-tb-col tb-col-mb">Created Date</th>
                     <th class="nk-tb-col nk-tb-col-tools text-end"></th>
                   </tr>
@@ -41,7 +41,7 @@
                       <td class="nk-tb-col">
                         {{ $no++ }}
                       </td>
-                      <td class="nk-tb-col"><span class="">{{ $item->name }}</span></td>
+                      <td class="nk-tb-col"><span class="">{{ $item->title }}</span></td>
                       <td class="nk-tb-col tb-col-mb"><span class="">{{ timesInd($item->created_at) }}</span>
                       </td>
                       <td class="nk-tb-col nk-tb-col-tools">
@@ -54,7 +54,7 @@
                                 <ul class="link-list-opt no-bdr">
                                   <li><a href="javascript:void(0);" data-id={{ $item->id }} class="update"><em
                                         class="icon ni ni-pen"></em><span>Edit</span></a></li>
-                                  <li><a href="javascript:void(0);" data-url="inform/brand"
+                                  <li><a href="javascript:void(0);" data-url="inform/overrage"
                                       data-identity={{ $item->id }} class="delete"><em
                                         class="icon ni ni-trash"></em><span>Delete</span></a>
                                   </li>
@@ -83,17 +83,21 @@
           <em class="icon ni ni-cross"></em>
         </a>
         <div class="modal-header">
-          <h5 class="modal-title">Add Brand</h5>
+          <h5 class="modal-title">Add Overrage</h5>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="form-group col-md-12">
-              <label class="form-label">Name <small class="text-danger">*</small></label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+              <label class="form-label">Title <small class="text-danger">*</small></label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="title">
             </div>
             <div class="form-group col-md-12">
-              <label class="form-label">Image</label>
-              <input type="file" class="form-control" name="image" placeholder="image" id="image">
+              <label class="form-label">Icon</label>
+              <input type="file" class="form-control" name="icon" placeholder="icon" id="icon">
+            </div>
+            <div class="form-group col-md-12">
+              <label class="form-label">Description</label>
+              <textarea name="description" class="form-control" placeholder="description"></textarea>
             </div>
           </div>
         </div>
@@ -110,19 +114,22 @@
           <em class="icon ni ni-cross"></em>
         </a>
         <div class="modal-header">
-          <h5 class="modal-title">Edit Brand</h5>
+          <h5 class="modal-title">Edit Overrage</h5>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="form-group col-md-12">
-              <label class="form-label">Name <small class="text-danger">*</small></label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+              <label class="form-label">Title <small class="text-danger">*</small></label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="title">
               <input type="hidden" name="id">
             </div>
             <div class="form-group col-md-12">
-              <label class="form-label">Image</label>
-              <input type="file" class="form-control" name="image" placeholder="image" id="image">
-              <input type="hidden" id="id" name="id">
+              <label class="form-label">Icon</label>
+              <input type="file" class="form-control" name="icon" placeholder="icon" id="icon">
+            </div>
+            <div class="form-group col-md-12">
+              <label class="form-label">Description</label>
+              <textarea name="description" class="form-control" placeholder="description"></textarea>
             </div>
 
           </div>
@@ -138,6 +145,6 @@
       let csrfToken = $('meta[name="csrf-token"]').attr("content");
     </script>
     <script src="{{ asset('custom/js/utils/delete.js') }}"></script>
-    <script src="{{ asset('custom/js/inform/brand.js') }}"></script>
+    <script src="{{ asset('custom/js/inform/overrage.js') }}"></script>
   @endpush
 @endsection

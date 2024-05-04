@@ -54,7 +54,7 @@ class PostCarController extends Controller
         ]);
 
         $eks = $request->file('photo')->getClientOriginalExtension();
-        $request->file('photo')->storeAs('assets/post', md5($request->file('photo')) . '.' . $eks);
+        $request->file('photo')->storeAs('assets/image', md5($request->file('photo')) . '.' . $eks);
         PostCar::create([
             'title' => $request->title,
             'slug' => $request->slug,
@@ -104,7 +104,7 @@ class PostCarController extends Controller
         if ($request->file('photo')) {
             Storage::delete('assets/blog/' . $blog->photo);
             $eks = $request->file('photo')->getClientOriginalExtension();
-            $request->file('photo')->storeAs('assets/post', md5($request->file('photo')) . '.' . $eks);
+            $request->file('photo')->storeAs('assets/image', md5($request->file('photo')) . '.' . $eks);
             $blog->photo = md5($request->file('photo')) . '.' . $eks;
         }
         $blog->title = $request->title;
@@ -125,7 +125,7 @@ class PostCarController extends Controller
 
         if ($post) {
             if ($post->photo) {
-                Storage::delete('assets/post/' . $post->photo);
+                Storage::delete('assets/image/' . $post->photo);
             }
             $post->delete();
 
