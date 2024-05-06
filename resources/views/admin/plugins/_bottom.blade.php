@@ -8,6 +8,6 @@
 <script src="{{ asset('custom/js/utils/select2.js') }}"></script>
 <script src="{{ asset('admin/assets/js/libs/editors/summernote.js') }}"></script>
 <script>
-  let baseUrl = 'http://127.0.0.1:8000'
+  let baseUrl = 'https://rentalmobil.marspedia.id'
 </script>
 @stack('customJs')
