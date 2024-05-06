@@ -13,7 +13,7 @@
           <div class="section-title mb-70">
 
             <!-- Title -->
-            <h2 class="s-50 w-700">Postingan</h2>
+            <h2 class="s-50 w-700">{{ $s }}</h2>
 
           </div>
         </div>
@@ -24,7 +24,7 @@
 
 
         <!-- BLOG POST #1 -->
-        @foreach ($post as $item)
+        @foreach ($results as $item)
           <div class="col-md-6 col-lg-4">
             <div id="bp-1-1" class="blog-post wow fadeInUp">
 

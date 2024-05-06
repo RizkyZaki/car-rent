@@ -4,7 +4,7 @@
 @endphp
 @section('content-client')
   <!-- HERO-17
-                                                                                                                           ============================================= -->
+                                                                                                                                         ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
@@ -22,19 +22,17 @@
             </p>
 
             <!-- HERO QUICK FORM -->
-            <form name="quickform" class="quick-form form-shadow mt-45">
+            <form action="{{ url('search') }}" method="GET" name="" class=" form-shadow mt-45">
 
               <!-- Form Inputs -->
               <div class="input-group">
-                <input type="email" name="email" class="form-control email r-06" placeholder="Cari Mobil"
-                  autocomplete="off" required>
+                <input type="text" name="query" value="{{ request('query') }}" class="form-control email r-06"
+                  placeholder="Cari Mobil" autocomplete="off" required>
                 <span class="input-group-btn form-btn">
                   <button type="submit" class="btn r-06 btn--theme hover--theme submit">Cari</button>
                 </span>
               </div>
 
-              <!-- Form Message -->
-              <div class="quick-form-msg"><span class="loading"></span></div>
 
             </form>
 

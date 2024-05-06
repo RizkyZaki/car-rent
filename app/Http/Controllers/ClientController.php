@@ -64,7 +64,15 @@ class ClientController extends Controller
             'profile' => $profile,
         ]);
     }
-    public function search()
+    public function search(Request $request)
     {
+        $query = $request->input('query');
+
+        // Lakukan pencarian sesuai dengan query
+        $results = PostCar::where('title', 'like', '%' . $query . '%')->get();
+        return view('client.pages.detail.search', [
+            's' => $query,
+            'results' => $results,
+        ]);
     }
 }
