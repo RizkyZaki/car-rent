@@ -37,6 +37,21 @@
                     </div>
                   </div>
                 </div>
+                <div class="row g-3 align-center">
+                  <div class="col-lg-5">
+                    <div class="form-group">
+                      <label class="form-label">Header Title</label>
+                      <span class="form-note">Specify the Header Title</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="form-group">
+                      <div class="form-control-wrap">
+                        <input type="text" class="form-control" name="header" value="{{ appSetting()->header }}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="row g-3 align-center">
                   <div class="col-lg-5">
@@ -182,7 +197,7 @@
                     </div>
                   </div>
                 </div>
-                
+
 
               </div>
 

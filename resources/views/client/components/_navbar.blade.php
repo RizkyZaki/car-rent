@@ -1,6 +1,6 @@
 <!-- HEADER
    ============================================= -->
-<header id="header" class="tra-menu navbar-light white-scroll">
+<header id="header" class="tra-menu navbar-dark light-hero-header white-scroll">
   <div class="header-wrapper">
 
 
@@ -38,9 +38,15 @@
             <!-- SIMPLE NAVIGATION LINK -->
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('/') }}" class="h-link">Beranda</a></li>
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('blog') }}" class="h-link">Blog</a></li>
-            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('profile') }}" class="h-link">Profile Kami</a>
+            <li aria-haspopup="true"><a href="#" class="h-link">Profile Kami <span class="wsarrow"></span></a>
+              <ul class="sub-menu">
+                @foreach (getProfile() as $item)
+                  <li aria-haspopup="true"><a href="{{ url('/' . $item->slug) }}">{{ $item->name }}</a></li>
+                @endforeach
+              </ul>
             </li>
-            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('contact') }}" class="h-link">Kontak</a></li>
+            <li class="nl-simple" aria-haspopup="true"><a href="https://wa.me/{{ appSetting()->phone }}"
+                class="h-link">Kontak</a></li>
 
           </ul>
         </nav> <!-- END MAIN MENU -->

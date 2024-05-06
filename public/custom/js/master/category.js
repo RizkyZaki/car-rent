@@ -86,10 +86,9 @@ $(document).on("click", ".update", function (e) {
         success: function (response) {
             if (response.status === "true") {
                 let data = response.data;
-                console.log(data.name);
+                console.log(data.image);
                 $('#change-modal input[name="name"]').val(data.name);
                 $('#change-modal input[name="slug"]').val(data.slug);
-                $('#change-modal input[name="image"]').val(data.image);
 
                 // Menyimpan slug asli sebelum pembaruan
                 $('#change-modal input[name="id"]').val(data.id);

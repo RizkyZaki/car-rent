@@ -1,13 +1,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="author" content="DSAThemes">
-<meta name="description" content="Martex - Software, App, SaaS & Startup Landing Pages Pack">
-<meta name="keywords"
-  content="Responsive, HTML5, DSAThemes, Landing, Software, Mobile App, SaaS, Startup, Creative, Digital Product">
+<meta name="author" content="ZCH">
+<meta name="description" content="{{ appSetting()->description }}">
+<meta name="keywords" content="{{ appSetting()->keyword }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- SITE TITLE -->
-<title>Martex - Software, App, SaaS & Startup Landing Pages Pack</title>
+<title>{{ appSetting()->name }}</title>
 
 <!-- FAVICON AND TOUCH ICONS -->
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">

@@ -67,7 +67,6 @@ $(document).on("click", ".update", function (e) {
             if (response.status === "true") {
                 let data = response.data;
                 $('#change-modal input[name="title"]').val(data.title);
-                $('#change-modal input[name="icon"]').val(data.icon);
                 $('#change-modal textarea[name="description"]').val(
                     data.description
                 );

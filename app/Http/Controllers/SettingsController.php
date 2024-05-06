@@ -18,6 +18,7 @@ class SettingsController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string',
+            'header' => 'required|string',
             'keyword' => 'required|string',
             'description' => 'required|string',
             'overrage_text' => 'required|string',
@@ -31,7 +32,7 @@ class SettingsController extends Controller
 
         // Ambil data dari request
         $data = $request->only([
-            'name', 'keyword', 'description', 'overrage_text',
+            'name', 'header', 'keyword', 'description', 'overrage_text',
             'phone', 'contact_phone', 'email', 'text_copyright'
         ]);
 

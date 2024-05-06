@@ -48,9 +48,9 @@ class CategoryController extends Controller
                 'icon' => 'error'
             ]);
         }
-        $hashImg = md5($request->image);
         $eks =  $request->image->getClientOriginalExtension();
-        $request->image->storeAs('assets/image', $hashImg . '.' . $eks);
+        $hashImg = md5($request->image)  . '.' . $eks;
+        $request->image->storeAs('assets/image', $hashImg);
         $data = [
             'name' => $request->name,
             'slug' => $request->slug,

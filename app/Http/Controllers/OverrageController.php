@@ -52,9 +52,9 @@ class OverrageController extends Controller
             ]);
         }
 
-        $hashImg = md5($request->icon);
         $eks =  $request->icon->getClientOriginalExtension();
-        $request->icon->storeAs('assets/image', $hashImg . '.' . $eks);
+        $hashImg = md5($request->icon) . '.' . $eks;
+        $request->icon->storeAs('assets/image', $hashImg);
 
         $data = [
             'title' => $request->title,

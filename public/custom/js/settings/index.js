@@ -7,6 +7,7 @@ $(document).on("click", ".save", function (e) {
     $("div.spanner").addClass("show");
     $("div.overlay").addClass("show");
     let name = $('input[name="name"]').val();
+    let header = $('input[name="header"]').val();
     let description = $('input[name="description"]').val();
     let keyword = $('input[name="keyword"]').val();
     let overrage_text = $('input[name="overrage_text"]').val();
@@ -18,6 +19,7 @@ $(document).on("click", ".save", function (e) {
     let benefit = $('select[name="benefit[]"]').val();
     let form = new FormData();
     form.append("name", name);
+    form.append("header", header);
     form.append("logo", logo);
     form.append("keyword", keyword);
     form.append("description", description);
