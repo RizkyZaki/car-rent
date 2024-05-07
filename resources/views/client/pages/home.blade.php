@@ -124,7 +124,9 @@
           </div>
         @endforeach
       </div> <!-- END BLOG POST #1 -->
-      <a href="{{ url('post') }}" class="btn mb-5 btn--theme hover--theme">Lihat Selengkapnya</a>
+      <div class="text-center">
+        <a href="{{ url('post') }}" class="btn mb-5 btn--theme hover--theme">Lihat Selengkapnya</a>
+      </div>
 
 
       <!-- SECTION TITLE -->

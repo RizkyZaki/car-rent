@@ -1,7 +1,7 @@
 @extends('client.layout.main')
 @section('content-client')
   <!-- SINGLE POST
-                                 ============================================= -->
+                                   ============================================= -->
   <section id="single-post" class="pb-90 inner-page-hero blog-page-section">
     <div class="container">
       <div class="row justify-content-center">
@@ -23,7 +23,7 @@
             </div> <!-- END SINGLE POST TITLE -->
 
             <!-- SINGLE POST IMAGE -->
-            <div class="blog-post-img py-50">
+            <div class="blog-post-img py-50 text-center">
               <img class="img-fluid r-16" src="{{ asset('storage/assets/image/' . $blog->photo) }}" alt="blog-post-image">
             </div>
             <!-- SINGLE POST TEXT -->

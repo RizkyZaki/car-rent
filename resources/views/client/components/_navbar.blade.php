@@ -38,15 +38,18 @@
             <!-- SIMPLE NAVIGATION LINK -->
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('/') }}" class="h-link">Beranda</a></li>
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('blog') }}" class="h-link">Blog</a></li>
-            <li aria-haspopup="true"><a href="#" class="h-link">Profile Kami <span class="wsarrow"></span></a>
-              <ul class="sub-menu">
-                @foreach (getProfile() as $item)
-                  <li aria-haspopup="true"><a href="{{ url('/' . $item->slug) }}">{{ $item->name }}</a></li>
-                @endforeach
-              </ul>
+            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('post') }}" class="h-link">Daftar harga</a>
             </li>
+            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('rentalpedia') }}" class="h-link">Company
+                Profile</a>
+            </li>
+            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('blog/syarat-dan-ketentuan') }}"
+                class="h-link">Syarat &
+                Ketentuan</a>
+            </li>
+
             <li class="nl-simple" aria-haspopup="true"><a href="https://wa.me/{{ appSetting()->phone }}"
-                class="h-link">Kontak</a></li>
+                class="h-link">Hubungi Kami</a></li>
 
           </ul>
         </nav> <!-- END MAIN MENU -->
