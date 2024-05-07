@@ -348,8 +348,8 @@
                 <p class="p-xl">{{ appSetting()->contact_text }}</p>
 
                 <!-- Button -->
-                <a href="https://wa.me/{{ appSetting()->phone }}" class="btn r-04 btn--theme hover--tra-white"
-                  data-bs-toggle="modal" data-bs-target="#modal-3">Hubungi kami
+                <a href="https://wa.me/{{ appSetting()->phone }}" class="btn r-04 btn--theme hover--tra-white">Hubungi
+                  kami
                 </a>
 
                 <!-- Button Text -->
