@@ -41,14 +41,7 @@
                   <a href="{{ url('blog/' . $item->slug) }}">{{ $item->title }}</a>
                 </h6>
                 <!-- Post Meta -->
-                <div class="blog-post-meta mt-20">
-                  <ul class="post-meta-list ico-10">
 
-                    <li>
-                      <p class="p-sm">{{ timesInd($item->created_at) }}</p>
-                    </li>
-                  </ul>
-                </div>
 
               </div> <!-- END BLOG POST TEXT -->
 
