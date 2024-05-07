@@ -32,7 +32,7 @@ class SettingsController extends Controller
 
         // Ambil data dari request
         $data = $request->only([
-            'name', 'header', 'keyword', 'description', 'overrage_text',
+            'name', 'header', 'keyword', 'company', 'description', 'overrage_text',
             'phone', 'contact_phone', 'contact_text', 'email', 'text_copyright'
         ]);
 

@@ -10,6 +10,7 @@ $(document).on("click", ".save", function (e) {
     let header = $('input[name="header"]').val();
     let description = $('input[name="description"]').val();
     let keyword = $('input[name="keyword"]').val();
+    let company = $('input[name="company"]').val();
     let contact_text = $('input[name="contact_text"]').val();
     let overrage_text = $('input[name="overrage_text"]').val();
     let phone = $('input[name="phone"]').val();
@@ -25,6 +26,8 @@ $(document).on("click", ".save", function (e) {
     form.append("contact_text", contact_text);
     form.append("description", description);
     form.append("overrage_text", overrage_text);
+    form.append("keyword", keyword);
+    form.append("company", company);
     form.append("phone", phone);
     form.append("contact_phone", contact_phone);
     form.append("email", email);

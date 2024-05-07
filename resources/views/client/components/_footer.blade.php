@@ -7,31 +7,43 @@
     <div class="row">
 
       <!-- FOOTER LOGO -->
-      <div class="col-md-5">
+      <div class="col-md-6">
         <div class="footer-info">
-          <img class="footer-logo" src="{{ asset('storage/assets/logo/' . appSetting()->logo) }}" alt="footer-logo">
-          <img class="footer-logo-dark" src="{{ asset('storage/assets/logo/' . appSetting()->logo) }}" alt="footer-logo">
+          <div class="d-flex px-2">
+            <img class="footer-logo" src="{{ asset('storage/assets/logo/' . appSetting()->logo) }}" alt="footer-logo">
+            <img class="footer-logo-dark" src="{{ asset('storage/assets/logo/' . appSetting()->logo) }}"
+              alt="footer-logo">
+            <h3>{{ appSetting()->company }}</h3>
+          </div>
           <p class="mt-3">{{ appSetting()->description }}</p>
         </div>
       </div>
 
       <!-- FOOTER LINKS -->
-      <div class="col-md-5">
+      <div class="col-md-3">
         <div class="footer-links fl-1">
 
           <!-- Title -->
-          <h6 class="s-17 w-700">Menu</h6>
+          <h6 class="s-17 w-700">About Us</h6>
 
           <!-- Links -->
           <ul class="foo-links clearfix">
             <li>
+              <p><a href="{{ url('blog/syarat-dan-ketentuan') }}">Syarat &
+                  Ketentuan</a></p>
+            </li>
+            <li>
+              <p><a href="{{ url('rentalpedia') }}">Company
+                  Profile</a></p>
+            </li>
+            <li>
+              <p><a href="https://wa.me/{{ appSetting()->phone }}">Hubungi Kami</a></p>
+            </li>
+            <li>
               <p><a href="{{ url('blog') }}">Blog</a></p>
             </li>
             <li>
-              <p><a href="{{ url('post') }}">Post</a></p>
-            </li>
-            <li>
-              <p><a href="{{ url('contact') }}">Contact Us</a></p>
+              <p><a href="{{ url('sitemap') }}">Sitemap</a></p>
             </li>
           </ul>
 
@@ -39,9 +51,20 @@
       </div> <!-- END FOOTER LINKS -->
 
       <!-- FOOTER LINKS -->
-      <div class="col-md-2">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1t5CFC_db7pXOUslQd7uwWB-muXk&hl=en&ehbc=2E312F"
-          width="200" height="180"></iframe>
+      <div class="col-md-3">
+        <div class="footer-links fl-4">
+
+          <!-- Title -->
+          <h6 class="s-17 w-700">Contact Us</h6>
+
+          <!-- Mail Link -->
+          <p class="footer-mail-link ico-25">
+            <a href="https://wa.me/{{ appSetting()->phone }}">{{ appSetting()->phone }}</a>
+          </p>
+          <p class="footer-mail-link ico-25">
+            <a href="mailto:{{ appSetting()->email }}">{{ appSetting()->email }}</a>
+          </p>
+        </div>
       </div> <!-- END FOOTER LINKS -->
 
     </div> <!-- END FOOTER CONTENT -->

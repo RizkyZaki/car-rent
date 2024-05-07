@@ -165,6 +165,22 @@
                 <div class="row g-3 align-center">
                   <div class="col-lg-5">
                     <div class="form-group">
+                      <label class="form-label">Site Company</label>
+                      <span class="form-note">Specify the Company of your website.</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="form-group">
+                      <div class="form-control-wrap">
+                        <input type="text" class="form-control" name="company"
+                          value="{{ appSetting()->company }}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-3 align-center">
+                  <div class="col-lg-5">
+                    <div class="form-group">
                       <label class="form-label">Site Contact Text</label>
                       <span class="form-note">Specify the Contact text of your website.</span>
                     </div>
