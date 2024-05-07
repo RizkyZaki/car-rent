@@ -50,24 +50,19 @@
 
     <!-- BOTTOM FOOTER -->
     <div class="bottom-footer">
-      <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
 
-        <!-- FOOTER COPYRIGHT -->
-        <div class="col">
-          <div class="footer-copyright">
-            <p class="p-sm">{{ appSetting()->text_copyright }}</p>
-          </div>
+      <!-- FOOTER COPYRIGHT -->
+      <div class="text-center">
+        <div class="footer-copyright">
+          <p class="p-sm">{{ appSetting()->text_copyright }}</p>
         </div>
+      </div>
 
-        <!-- FOOTER SECONDARY LINK -->
-        <div class="col text-end">
-          <div class="bottom-secondary-link ico-15">
-            <p class="p-sm"><a href="https://marspedia.id">Powered by Marspedia.ID</a></p>
-          </div>
-        </div>
+      <!-- FOOTER SECONDARY LINK -->
 
-      </div> <!-- End row -->
-    </div> <!-- END BOTTOM FOOTER -->
+
+    </div> <!-- End row -->
+  </div> <!-- END BOTTOM FOOTER -->
 
 
   </div> <!-- End container -->
