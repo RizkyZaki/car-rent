@@ -23,9 +23,9 @@
     }
 
     .brand-logo img {
-      width: auto;
+      width: 150px;
       /* Menyesuaikan lebar gambar */
-      height: 50px;
+      height: 150px;
       /* Menyesuaikan tinggi gambar */
       vertical-align: middle;
       /* Menyesuaikan tata letak vertikal dengan teks */
@@ -34,7 +34,7 @@
     }
   </style>
   <!-- HERO-17
-                                                                                                                                                         ============================================= -->
+                                                                                                                                                           ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
