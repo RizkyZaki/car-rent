@@ -98,7 +98,7 @@
                     @foreach ($item->rent as $item)
                       <tr>
                         <td>{{ $item->rent }}</td>
-                        <td>: {{ $item->fee }}</td>
+                        <td>: {{ formatIDR($item->fee) }}</td>
                       </tr>
                     @endforeach
                   </tbody>
@@ -119,11 +119,11 @@
                     </li>
                   </ul>
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                   @foreach ($benefits as $benefit)
                     <div class="col-md-6">&#10003; {{ $benefit }}</div>
                   @endforeach
-                </div>
+                </div> --}}
 
               </div>
 
