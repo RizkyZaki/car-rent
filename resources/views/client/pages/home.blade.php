@@ -6,7 +6,7 @@
   <style>
   </style>
   <!-- HERO-17
-                                                                                                                                                   ============================================= -->
+                                                                                                                                                     ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
@@ -54,7 +54,8 @@
                 <!-- BRAND LOGO IMAGE -->
                 <div class="brand-logo">
                   <a href="{{ url('category/' . $item->slug) }}"><img class="img-fluid light-theme-img"
-                      src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo">{{ $item->name }}</a>
+                      src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo"></a>
+                  <p>{{ $item->name }}</p>
                 </div>
               @endforeach
 
