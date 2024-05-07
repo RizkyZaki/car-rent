@@ -53,6 +53,12 @@
             </a>
           </li>
           <li class="nk-menu-item">
+            <a href="{{ url('dashboard/inform/media') }}" class="nk-menu-link">
+              <span class="nk-menu-icon"><em class="icon ni ni-swap-alt-fill"></em></span>
+              <span class="nk-menu-text">Media</span>
+            </a>
+          </li>
+          <li class="nk-menu-item">
             <a href="{{ url('dashboard/inform/profile') }}" class="nk-menu-link">
               <span class="nk-menu-icon"><em class="icon ni ni-swap-alt-fill"></em></span>
               <span class="nk-menu-text">Profile</span>
