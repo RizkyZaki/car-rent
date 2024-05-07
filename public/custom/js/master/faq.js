@@ -16,12 +16,10 @@ function texteditor() {
         ],
     });
 }
-$(document).ready(function () {
-    texteditor();
-});
 $(document).on("click", ".create", function (e) {
     e.preventDefault();
     $("#add-modal").modal("show");
+    texteditor();
 });
 
 $(document).on("click", ".add", function (e) {
@@ -86,31 +84,13 @@ $(document).on("click", ".update", function (e) {
                 let data = response.data;
                 console.log(data.name);
                 $('#change-modal input[name="question"]').val(data.question);
-                $('#change-modal textarea[name="answer"]')
-                    .val(data.answer)
-                    .summernote({
-                        placeholder: "Description",
-                        tabsize: 2,
-                        height: 150,
-                        toolbar: [
-                            ["style", ["style"]],
-                            ["font", ["bold", "italic", "underline", "clear"]],
-                            [
-                                "font",
-                                ["strikethrough", "superscript", "subscript"],
-                            ],
-                            ["fontname", ["fontname"]],
-                            ["fontsize", ["fontsize"]],
-                            ["color", ["color"]],
-                            ["para", ["ul", "ol", "paragraph"]],
-                            ["height", ["height"]],
-                        ],
-                    });
+                $('#change-modal textarea[name="answer"]').val(data.answer);
 
                 // Menyimpan slug asli sebelum pembaruan
                 $('#change-modal input[name="id"]').val(data.id);
 
                 $("#change-modal").modal("show");
+                texteditor();
             } else {
                 Swal.fire(
                     "Error",

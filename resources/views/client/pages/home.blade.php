@@ -191,6 +191,7 @@
   </section> <!-- END FEATURES-11 -->
   <section id="faqs-2" class="gr--whitesmoke pb-15 inner-page-hero faqs-section division">
     <div class="container">
+      <h2 class="s-50 w-700 mb-3 mt-3">Frequently Asked Question (F.A.Q)</h2>
       <div class="row justify-content-center">
         @foreach ($faq as $item)
           <div class="col-lg-11 col-xl-10">
