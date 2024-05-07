@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Faq;
+use App\Models\Media;
 use App\Models\Overrage;
 use App\Models\PostCar;
 use App\Models\Profile;
@@ -21,7 +22,8 @@ class ClientController extends Controller
             'posts' => PostCar::limit(5)->get(),
             'fav_post' => PostCar::latest()->take(6),
             'faq' => Faq::all(),
-            'brand' => Brand::all()
+            'brand' => Brand::all(),
+            'media' => Media::all()
         ]);
     }
     public function blog()

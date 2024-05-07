@@ -284,6 +284,29 @@
     </div> <!-- END BLOG POST #1 -->
   </div>
   <div class="container">
+    <h6 class="s-20 w-700">
+      {{ appSetting()->name }}
+    </h6>
+    <p>Kami telah diliput oleh beberapa media online ternama diantaranya adalah</p>
+    <div id="brands-1">
+      <div class="row">
+        <div class="col text-center">
+          <div class="owl-carousel brands-carousel-5">
+
+            @foreach ($media as $item)
+              <!-- BRAND LOGO IMAGE -->
+              <div class="brand-logo">
+                <a href="javascript:void(0);"><img class="img-fluid light-theme-img"
+                    src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo"></a>
+              </div>
+            @endforeach
+
+          </div>
+        </div>
+      </div> <!-- End row -->
+    </div> <!-- END BRANDS CAROUSEL -->
+  </div>
+  <div class="container">
 
     <div id="brands-1">
       <div class="row">
@@ -322,7 +345,7 @@
                 <h2 class="s-45 w-700">Hubungi Kami Sekarang</h2>
 
                 <!-- Text -->
-                <p class="p-xl">Hubungi Kami Untuk informasi lebih lengkap terkait produk dan layanan terbaru</p>
+                <p class="p-xl">{{ appSetting()->contact_text }}</p>
 
                 <!-- Button -->
                 <a href="https://wa.me/{{ appSetting()->phone }}" class="btn r-04 btn--theme hover--tra-white"

@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\MediaController;
 use App\Http\Controllers\OverrageController;
 use App\Http\Controllers\PostCarController;
 use App\Http\Controllers\ProfileController;
@@ -33,6 +34,7 @@ Route::prefix('dashboard')->group(function () {
         Route::prefix('inform')->group(function () {
             Route::resource('overrage', OverrageController::class);
             Route::resource('brand', BrandController::class);
+            Route::resource('media', MediaController::class);
             Route::resource('profile', ProfileController::class);
             Route::resource('blog', BlogController::class);
             Route::resource('post-car', PostCarController::class);
