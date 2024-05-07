@@ -97,13 +97,13 @@ $(document).on("click", ".save", function (e) {
     e.preventDefault();
     $("div.spanner").addClass("show");
     $("div.overlay").addClass("show");
-    let name = $('#change-modal input[name="name"]').val();
+    let title = $('#change-modal input[name="title"]').val();
     let id = $('#change-modal input[name="id"]').val();
     let icon = $('#change-modal input[name="icon"]').prop("files")[0];
-    let description = $('#add-modal textarea[name="description"]').val();
+    let description = $('#change-modal textarea[name="description"]').val();
 
     let form = new FormData();
-    form.append("name", name);
+    form.append("title", title);
     form.append("icon", icon);
     form.append("description", description);
     form.append("_method", "PUT");

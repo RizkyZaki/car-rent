@@ -13,10 +13,7 @@
                   <h4 class="nk-block-title">{{ $title }}</h4>
                   <p>{{ $heading }}</p>
                 </div>
-                <div class="nk-block-head-content">
-                  <a href="{{ url('dashboard/inform/post-car/create') }}" class="btn btn-primary create"><em
-                      class="icon ni ni-plus"></em> <span> Add</span></a>
-                </div>
+
               </div>
             </div>
           </div>
