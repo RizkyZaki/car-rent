@@ -304,11 +304,13 @@
       </div> <!-- End row -->
     </div> <!-- END BRANDS CAROUSEL -->
   </div>
-  <div class="container">
-    <h6 class="s-20 w-700">
-      {{ appSetting()->name }}
-    </h6>
-    <p>Kami telah diliput oleh beberapa media online ternama diantaranya adalah</p>
+  <div class="container mt-5 mb-5">
+    <div class="text-center">
+      <h6 class="s-20 w-700">
+        {{ appSetting()->name }}
+      </h6>
+      <p>Kami telah diliput oleh beberapa media online ternama diantaranya adalah</p>
+    </div>
     <div id="brands-1">
       <div class="row">
         <div class="col text-center">
