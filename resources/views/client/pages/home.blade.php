@@ -18,25 +18,23 @@
       /* Menyesuaikan tata letak vertikal dengan gambar */
       text-decoration: none;
       /* Menghilangkan garis bawah pada tautan */
+      margin-left: 10px;
+      /* Memberikan jarak antara gambar dan teks */
     }
 
     .brand-logo img {
-      width: 200px;
+      width: auto;
       /* Menyesuaikan lebar gambar */
-      max-width: 100%;
-      /* Mengatur lebar maksimum gambar agar tidak melebihi lebar parent */
-      height: auto;
-      /* Memastikan gambar tetap proporsional */
-      display: inline-block;
-      /* Mengubah gambar menjadi blok inline */
+      height: 50px;
+      /* Menyesuaikan tinggi gambar */
+      vertical-align: middle;
+      /* Menyesuaikan tata letak vertikal dengan teks */
       margin-bottom: -4px;
       /* Menyesuaikan margin bawah agar serasi dengan teks */
-      padding: 10px;
-      /* Memberikan jarak antara gambar dan tepi kontainer */
     }
   </style>
   <!-- HERO-17
-                                                                                                                                                       ============================================= -->
+                                                                                                                                                         ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
