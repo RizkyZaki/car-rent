@@ -93,7 +93,7 @@
                   <a href="javascript:void(0);">{{ $item->title }}</a>
 
                 </h6>
-                <table style="border-collapse: collapse;">
+                <table style="border-collapse: collapse;margin: auto;">
                   <tbody>
                     @foreach ($item->rent as $item)
                       <tr>
@@ -106,7 +106,7 @@
 
 
                 <!-- Post Meta -->
-                <div class="blog-post-meta mt-20">
+                <div class="blog-post-meta mt-20 text-center">
                   <ul class="post-meta-list ico-10">
 
                     <li>
