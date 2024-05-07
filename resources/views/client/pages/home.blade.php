@@ -67,6 +67,7 @@
   <section id="features-11" class="pt-100 features-section division">
 
     <div class="container">
+      <h6 class="s-50 w-700 mb-3 mt-3 text-center">Daftar Harga</h6>
       <div class="row mb-5">
 
 
