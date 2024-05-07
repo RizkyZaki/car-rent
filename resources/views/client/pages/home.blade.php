@@ -73,7 +73,7 @@
 
         <!-- BLOG POST #1 -->
         @foreach ($posts as $item)
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-4 mb-3">
             <div id="bp-1-1" class="blog-post wow fadeInUp">
 
               <!-- BLOG POST IMAGE -->
