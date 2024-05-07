@@ -199,18 +199,18 @@
 
 
                 <!-- QUESTIONS CATEGORY #1 -->
-                <li class="accordion-item is-active">
+                <li class="accordion-item">
 
 
                   <!-- CATEGORY HEADER -->
                   <div class="accordion-thumb">
-                    <h4 class="s-28 w-700">{{ $item->question }}</h4>
+                    <h6 class="s-28 w-700">{{ $item->question }}</h6>
                   </div>
 
 
                   <!-- CATEGORY ANSWERS -->
                   <div class="accordion-panel">
-                    {{ $item->answer }}
+                    {!! $item->answer !!}
                   </div> <!-- END CATEGORY ANSWERS -->
 
 

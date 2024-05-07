@@ -94,7 +94,7 @@
             </div>
             <div class="form-group col-md-12">
               <label class="form-label">Answer</label>
-              <textarea type="text" class="form-control" name="answer"></textarea>
+              <textarea type="text" class="form-control summernote" name="answer"></textarea>
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@
             </div>
             <div class="form-group col-md-12">
               <label class="form-label">Answer</label>
-              <textarea type="text" class="form-control" name="answer"></textarea>
+              <textarea type="text" class="form-control summernote" name="answer"></textarea>
             </div>
 
           </div>
