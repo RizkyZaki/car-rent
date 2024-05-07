@@ -89,6 +89,7 @@ $(document).on("click", ".update", function (e) {
                 console.log(data.image);
                 $('#change-modal input[name="name"]').val(data.name);
                 $('#change-modal input[name="slug"]').val(data.slug);
+                // $('#change-modal input[name="image"]').val(data.image);
 
                 // Menyimpan slug asli sebelum pembaruan
                 $('#change-modal input[name="id"]').val(data.id);
@@ -123,7 +124,9 @@ $(document).on("click", ".save", function (e) {
     let form = new FormData();
     form.append("name", name);
     form.append("slug", slug);
-    form.append("image", image);
+    if (image) {
+        form.append("image", image);
+    }
     form.append("_method", "PUT");
 
     $.ajax({

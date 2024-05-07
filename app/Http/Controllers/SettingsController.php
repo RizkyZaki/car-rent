@@ -40,7 +40,7 @@ class SettingsController extends Controller
         if ($request->hasFile('logo')) {
             $hashLogo = md5($request->logo);
             $eks =  $request->logo->getClientOriginalExtension();
-            $request->logo->storeAs('assets/image', $hashLogo . '.' . $eks);
+            $request->logo->storeAs('assets/logo', $hashLogo . '.' . $eks);
             $data['logo'] = $hashLogo . '.' . $eks;
         }
 
