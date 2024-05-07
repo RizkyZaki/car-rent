@@ -38,7 +38,7 @@
             <!-- SIMPLE NAVIGATION LINK -->
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('/') }}" class="h-link">Beranda</a></li>
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('blog') }}" class="h-link">Blog</a></li>
-            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('post') }}" class="h-link">Daftar harga</a>
+            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('post') }}" class="h-link">Daftar Harga</a>
             </li>
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('rentalpedia') }}" class="h-link">Company
                 Profile</a>

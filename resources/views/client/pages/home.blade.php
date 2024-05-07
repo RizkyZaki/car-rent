@@ -119,8 +119,7 @@
                     </li>
                     <li>
                       <a href="https://wa.me/{{ appSetting()->contact_phone }}" target="_blank"
-                        class="btn btn--theme hover--theme w-full"><img src="https://templatenesia.com/wa.png"
-                          width="18" alt="">
+                        class="btn btn--theme hover--theme w-full">
                         Booking Now</a>
                     </li>
                   </ul>
@@ -225,69 +224,6 @@
       </div>
     </div>
   </section>
-  <div class="container mb-5 mt-5 pb-22">
-    <h6 class="s-20 w-700">
-      Kendaraan Favorit Di {{ appSetting()->name }}
-    </h6>
-    <div class="row mb-5">
-
-
-      <!-- BLOG POST #1 -->
-      @foreach ($fav_post as $item)
-        <div class="col-md-6 col-lg-4">
-          <div id="bp-1-1" class="blog-post wow fadeInUp">
-
-            <!-- BLOG POST IMAGE -->
-            <div class="blog-post-img mb-35">
-              <img class="img-fluid r-16" src="{{ asset('storage/assets/image/' . $item->photo) }}"
-                alt="blog-post-image">
-            </div>
-
-            <!-- BLOG POST TEXT -->
-            <div class="blog-post-txt">
-
-              <!-- Post Tag -->
-
-              <!-- Post Link -->
-              <h6 class="s-20 w-700">
-                {{-- <a href="{{ url('post/' . $item->slug) }}">{{ $item->title }}</a> --}}
-                <a href="javascript:void(0);">{{ $item->title }}</a>
-
-              </h6>
-              <ul>
-                @foreach ($item->rent as $item)
-                  <li>{{ $item->rent }} : {{ formatIDR($item->fee) }}</li>
-                @endforeach
-              </ul>
-              <!-- Post Meta -->
-              <div class="blog-post-meta mt-20">
-                <ul class="post-meta-list ico-10">
-
-                  <li>
-                    <a href="javascript:void(0);" class="btn btn--theme hover--theme"><span>&#9733;</span>
-                      5 </a>
-                  </li>
-                  <li>
-                    <a href="https://wa.me/{{ appSetting()->contact_phone }}"
-                      class="btn btn--theme hover--theme">Booking
-                      Now</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="row">
-                @foreach ($benefits as $benefit)
-                  <div class="col-md-6">&#10003; {{ $benefit }}</div>
-                @endforeach
-              </div>
-
-            </div>
-
-          </div> <!-- END BLOG POST TEXT -->
-
-        </div>
-      @endforeach
-    </div> <!-- END BLOG POST #1 -->
-  </div>
   <div class="container pt-4 pb-5">
     <div class="text-center mb-2">
       <h2>Brand</h2>

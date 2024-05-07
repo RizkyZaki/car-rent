@@ -1,7 +1,7 @@
 @extends('client.layout.main')
 @section('content-client')
   <!-- SINGLE POST
-                                   ============================================= -->
+                                     ============================================= -->
   <section id="single-post" class="pb-90 inner-page-hero blog-page-section">
     <div class="container">
       <div class="row justify-content-center">
@@ -16,7 +16,6 @@
             <div class="single-post-title text-center">
 
               <!-- Post Tag -->
-              <span class="post-tag color--green-400">{{ $blog->category->name ?? 'Blog' }}</span>
 
               <!-- Title -->
               <h2 class="s-46 w-700">{{ $blog->title }}</h2>

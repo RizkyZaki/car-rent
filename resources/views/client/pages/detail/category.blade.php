@@ -71,8 +71,7 @@
                     </li>
                     <li>
                       <a href="https://wa.me/{{ appSetting()->contact_phone }}" target="_blank"
-                        class="btn btn--theme hover--theme w-full"><img src="https://templatenesia.com/wa.png"
-                          width="18" alt="">
+                        class="btn btn--theme hover--theme w-full">
                         Booking Now</a>
                     </li>
                   </ul>
