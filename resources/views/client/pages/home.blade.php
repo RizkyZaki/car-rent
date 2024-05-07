@@ -4,9 +4,12 @@
 @endphp
 @section('content-client')
   <style>
+    .brand-logo img {
+      height: 73px !important;
+    }
   </style>
   <!-- HERO-17
-                                                                                                                                               ============================================= -->
+                                                                                                                                                 ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
