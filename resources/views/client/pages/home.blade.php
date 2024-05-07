@@ -284,7 +284,7 @@
     </div> <!-- END BLOG POST #1 -->
   </div>
 
-  <div class="container">
+  <div class="container mt-5">
 
     <div id="brands-1">
       <div class="row">
