@@ -283,17 +283,15 @@
       @endforeach
     </div> <!-- END BLOG POST #1 -->
   </div>
+
   <div class="container">
-    <h6 class="s-20 w-700">
-      {{ appSetting()->name }}
-    </h6>
-    <p>Kami telah diliput oleh beberapa media online ternama diantaranya adalah</p>
+
     <div id="brands-1">
       <div class="row">
         <div class="col text-center">
           <div class="owl-carousel brands-carousel-5">
 
-            @foreach ($media as $item)
+            @foreach ($brand as $item)
               <!-- BRAND LOGO IMAGE -->
               <div class="brand-logo">
                 <a href="javascript:void(0);"><img class="img-fluid light-theme-img"
@@ -307,13 +305,16 @@
     </div> <!-- END BRANDS CAROUSEL -->
   </div>
   <div class="container">
-
+    <h6 class="s-20 w-700">
+      {{ appSetting()->name }}
+    </h6>
+    <p>Kami telah diliput oleh beberapa media online ternama diantaranya adalah</p>
     <div id="brands-1">
       <div class="row">
         <div class="col text-center">
           <div class="owl-carousel brands-carousel-5">
 
-            @foreach ($brand as $item)
+            @foreach ($media as $item)
               <!-- BRAND LOGO IMAGE -->
               <div class="brand-logo">
                 <a href="javascript:void(0);"><img class="img-fluid light-theme-img"
