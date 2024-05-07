@@ -288,11 +288,11 @@
       <h2>Brand</h2>
     </div>
     <div class="row gx-3 gx-md-4 gy-3 gy-md-4 justify-content-center align-items-center">
-      <div class="col-3 col-md-2">
-        @foreach ($brand as $item)
+      @foreach ($brand as $item)
+        <div class="col-3 col-md-2">
           <img class="w-100" src="{{ asset('storage/assets/image/' . $item->image) }}" alt="" />
-        @endforeach
-      </div>
+        </div>
+      @endforeach
 
     </div>
   </div>
@@ -304,11 +304,11 @@
       <p>Kami telah diliput oleh beberapa media online ternama diantaranya adalah</p>
     </div>
     <div class="row gx-3 gx-md-4 gy-3 gy-md-4 justify-content-center align-items-center">
-      <div class="col-3 col-md-2">
-        @foreach ($media as $item)
+      @foreach ($media as $item)
+        <div class="col-3 col-md-2">
           <img class="w-100" src="{{ asset('storage/assets/image/' . $item->image) }}" alt="" />
-        @endforeach
-      </div>
+        </div>
+      @endforeach
 
     </div>
   </div>
