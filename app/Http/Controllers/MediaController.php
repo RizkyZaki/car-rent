@@ -60,7 +60,7 @@ class MediaController extends Controller
             'image' => $hashImg,
         ];
 
-        Brand::create($data);
+        Media::create($data);
 
         return response()->json([
             'status' => 'true',
