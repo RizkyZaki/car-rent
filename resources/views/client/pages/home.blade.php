@@ -187,7 +187,7 @@
 
     </div> <!-- End container -->
   </section> <!-- END FEATURES-11 -->
-  <section id="faqs-2" class="gr--whitesmoke pb-30 inner-page-hero faqs-section division">
+  <section id="faqs-2" class="gr--whitesmoke pb-15 inner-page-hero faqs-section division">
     <div class="container">
       <div class="row justify-content-center">
         @foreach ($faq as $item)
@@ -221,7 +221,7 @@
       </div>
     </div>
   </section>
-  <div class="container mb-5 mt-5">
+  <div class="container mb-5 mt-5 pb-22">
     <h6 class="s-20 w-700">
       Kendaraan Favorit Di {{ appSetting()->name }}
     </h6>
@@ -283,53 +283,35 @@
       @endforeach
     </div> <!-- END BLOG POST #1 -->
   </div>
+  <div class="container pt-4 pb-5">
+    <div class="text-center">
+      <h2>Brand</h2>
+    </div>
+    <div class="row gx-3 gx-md-4 gy-3 gy-md-4 justify-content-center align-items-center">
+      <div class="col-3 col-md-2">
+        @foreach ($brand as $item)
+          <img class="w-100" src="{{ asset('storage/assets/image/' . $item->image) }}" alt="" />
+        @endforeach
+      </div>
 
-  <div class="container mt-5">
-
-    <div id="brands-1">
-      <div class="row justify-content-center align-items-center">
-        <div class="col text-center">
-          <div class="owl-carousel brands-carousel-5">
-
-            @foreach ($brand as $item)
-              <!-- BRAND LOGO IMAGE -->
-              <div class="brand-logo">
-                <a href="javascript:void(0);"><img class="w-100 light-theme-img"
-                    src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo"></a>
-              </div>
-            @endforeach
-
-          </div>
-        </div>
-      </div> <!-- End row -->
-    </div> <!-- END BRANDS CAROUSEL -->
+    </div>
   </div>
-  <div class="container mt-5 mb-5">
+  <div class="container pt-4 pb-5">
     <div class="text-center">
       <h6 class="s-20 w-700">
         {{ appSetting()->name }}
       </h6>
       <p>Kami telah diliput oleh beberapa media online ternama diantaranya adalah</p>
     </div>
-    <div id="brands-1">
-      <div class="row">
-        <div class="col text-center">
-          <div class="owl-carousel brands-carousel-5">
+    <div class="row gx-3 gx-md-4 gy-3 gy-md-4 justify-content-center align-items-center">
+      <div class="col-3 col-md-2">
+        @foreach ($media as $item)
+          <img class="w-100" src="{{ asset('storage/assets/image/' . $item->image) }}" alt="" />
+        @endforeach
+      </div>
 
-            @foreach ($media as $item)
-              <!-- BRAND LOGO IMAGE -->
-              <div class="brand-logo">
-                <a href="javascript:void(0);"><img class="img-fluid light-theme-img"
-                    src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo"></a>
-              </div>
-            @endforeach
-
-          </div>
-        </div>
-      </div> <!-- End row -->
-    </div> <!-- END BRANDS CAROUSEL -->
+    </div>
   </div>
-
   <section id="banner-1" class="pt-100 banner-section">
     <div class="container">
 
