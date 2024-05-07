@@ -88,16 +88,23 @@
                 <!-- Post Tag -->
 
                 <!-- Post Link -->
-                <h6 class="s-20 w-700">
+                <h6 class="s-20 w-700 text-center">
                   {{-- <a href="{{ url('post/' . $item->slug) }}">{{ $item->title }}</a> --}}
                   <a href="javascript:void(0);">{{ $item->title }}</a>
 
                 </h6>
-                <ul>
-                  @foreach ($item->rent as $item)
-                    <li>{{ $item->rent }} : {{ formatIDR($item->fee) }}</li>
-                  @endforeach
-                </ul>
+                <table style="border-collapse: collapse;">
+                  <tbody>
+                    @foreach ($item->rent as $item)
+                      <tr>
+                        <td>{{ $item->rent }}</td>
+                        <td>: {{ $item->fee }}</td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+
+
                 <!-- Post Meta -->
                 <div class="blog-post-meta mt-20">
                   <ul class="post-meta-list ico-10">
