@@ -165,7 +165,7 @@
 
                 <!-- Icon -->
                 <div class="fbox-ico-wrap">
-                  <img src="{{ asset('storage/assets/image/' . $item->icon) }}" width="50" alt="">
+                  <img src="{{ asset('storage/assets/image/' . $item->icon) }}" width="10s0" alt="">
                 </div> <!-- End Icon -->
 
                 <!-- Text -->
