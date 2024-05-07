@@ -3,21 +3,6 @@
   $benefits = json_decode(appSetting()->benefit, true);
 @endphp
 @section('content-client')
-  <style>
-    .brand-logo img {
-      /* Menyesuaikan lebar gambar */
-      height: 150px;
-      /* Menyesuaikan tinggi gambar */
-      object-fit: cover;
-      /* Mengatur gambar untuk dipotong atau di-zoom agar sesuai dengan kotak yang telah ditetapkan */
-      vertical-align: middle;
-      /* Menyesuaikan tata letak vertikal dengan teks */
-      margin-bottom: -4px;
-      /* Menyesuaikan margin bawah agar serasi dengan teks */
-    }
-  </style>
-  <!-- HERO-17
-                                                                                                                                                               ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
@@ -64,8 +49,8 @@
               @foreach ($category as $item)
                 <!-- BRAND LOGO IMAGE -->
                 <div class="brand-logo">
-                  <a href="{{ url('category/' . $item->slug) }}"><img class="img-fluid light-theme-img"
-                      src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo">{{ $item->name }}</a>
+                  <a href="{{ url('category/' . $item->slug) }}">{{ $item->name }}<img class="img-fluid light-theme-img"
+                      src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo"></a>
                 </div>
               @endforeach
 
