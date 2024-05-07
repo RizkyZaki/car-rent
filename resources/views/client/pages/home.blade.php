@@ -143,10 +143,10 @@
           <div class="section-title mb-70">
 
             <!-- Title -->
-            <h2 class="s-50 w-700">Kenapa harus Rental Mobil Di Rentalpedia</h2>
+            <h2 class="s-50 w-700"> Kenapa Kamu Harus Sewa Mobil di Rentalpedia
+            </h2>
 
             <!-- Text -->
-            <p class="s-21 color--grey">{{ appSetting()->overrage_text }}</p>
 
           </div>
         </div>
