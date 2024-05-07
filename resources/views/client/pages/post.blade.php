@@ -66,8 +66,8 @@
                         5 </a>
                     </li>
                     <li>
-                      <a href="https://wa.me/{{ appSetting()->contact_phone }}"
-                        class="btn btn--theme hover--theme">Booking Now</a>
+                      <a href="https://wa.me/{{ appSetting()->contact_phone }}" target="_blank"
+                        class="btn btn--theme hover--theme w-full">Booking Now</a>
                     </li>
                   </ul>
                 </div>

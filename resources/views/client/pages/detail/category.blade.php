@@ -25,7 +25,7 @@
 
         <!-- BLOG POST #1 -->
         @foreach ($cat->posts as $item)
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-4 mb-3">
             <div id="bp-1-1" class="blog-post wow fadeInUp">
 
               <!-- BLOG POST IMAGE -->
@@ -40,16 +40,23 @@
                 <!-- Post Tag -->
 
                 <!-- Post Link -->
-                <h6 class="s-20 w-700">
+                <h6 class="s-20 w-700 text-center">
                   {{-- <a href="{{ url('post/' . $item->slug) }}">{{ $item->title }}</a> --}}
                   <a href="javascript:void(0);">{{ $item->title }}</a>
 
                 </h6>
-                <ul>
-                  @foreach ($item->rent as $item)
-                    <li>{{ $item->rent }} : {{ formatIDR($item->fee) }}</li>
-                  @endforeach
-                </ul>
+                <table style="border-collapse: collapse;">
+                  <tbody>
+                    @foreach ($item->rent as $item)
+                      <tr>
+                        <td>{{ $item->rent }}</td>
+                        <td>: {{ formatIDR($item->fee) }}</td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+
+
                 <!-- Post Meta -->
                 <div class="blog-post-meta mt-20">
                   <ul class="post-meta-list ico-10">
@@ -64,11 +71,11 @@
                     </li>
                   </ul>
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                   @foreach ($benefits as $benefit)
                     <div class="col-md-6">&#10003; {{ $benefit }}</div>
                   @endforeach
-                </div>
+                </div> --}}
 
               </div>
 
