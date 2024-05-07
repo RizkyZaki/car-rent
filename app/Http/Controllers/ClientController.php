@@ -19,7 +19,7 @@ class ClientController extends Controller
         return view('client.pages.home', [
             'category' => Category::all(),
             'overrage' => Overrage::all(),
-            'posts' => PostCar::limit(5)->get(),
+            'posts' => PostCar::limit(15)->get(),
             'fav_post' => PostCar::latest()->take(6),
             'faq' => Faq::all(),
             'brand' => Brand::all(),
