@@ -59,10 +59,10 @@
 
           <!-- Mail Link -->
           <p class="footer-mail-link ico-25">
-            <a href="https://wa.me/{{ appSetting()->phone }}">{{ appSetting()->phone }}</a>
+            <a href="https://wa.me/{{ appSetting()->phone }}">Whatsapp : {{ appSetting()->phone }}</a>
           </p>
           <p class="footer-mail-link ico-25">
-            <a href="mailto:{{ appSetting()->email }}">{{ appSetting()->email }}</a>
+            <a href="mailto:{{ appSetting()->email }}">Email : {{ appSetting()->email }}</a>
           </p>
         </div>
       </div> <!-- END FOOTER LINKS -->
