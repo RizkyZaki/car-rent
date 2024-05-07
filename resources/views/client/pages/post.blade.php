@@ -67,7 +67,8 @@
                     </li>
                     <li>
                       <a href="https://wa.me/{{ appSetting()->contact_phone }}" target="_blank"
-                        class="btn btn--theme hover--theme w-full">Booking Now</a>
+                        class="btn btn--theme hover--theme w-full"><span>&#128241;</span>
+                        Booking Now</a>
                     </li>
                   </ul>
                 </div>
