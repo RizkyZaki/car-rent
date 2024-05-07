@@ -4,30 +4,9 @@
 @endphp
 @section('content-client')
   <style>
-    .brand-logo {
-      text-align: center;
-      /* Memastikan teks dan gambar berada di tengah */
-      margin-top: 20px;
-      /* Menyesuaikan margin atas */
-    }
-
-    .brand-logo img {
-      width: 200px;
-      /* Menyesuaikan lebar gambar */
-      max-width: 100%;
-      /* Mengatur lebar maksimum gambar agar tidak melebihi lebar parent */
-      height: auto;
-      /* Memastikan gambar tetap proporsional */
-      display: block;
-      /* Menghilangkan ruang putih di bawah gambar */
-      margin: 0 auto;
-      /* Mengatur margin untuk pemosisian tengah secara horizontal */
-      padding: 10px;
-      /* Memberikan jarak antara gambar dan tepi kontainer */
-    }
   </style>
   <!-- HERO-17
-                                                                                                                                             ============================================= -->
+                                                                                                                                               ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
