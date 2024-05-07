@@ -3,8 +3,22 @@
   $benefits = json_decode(appSetting()->benefit, true);
 @endphp
 @section('content-client')
+  <style>
+    .brand-logo img {
+      max-width: 100%;
+      /* Mengatur lebar maksimum gambar agar tidak melebihi lebar parent */
+      height: auto;
+      /* Memastikan gambar tetap proporsional */
+      display: block;
+      /* Menghilangkan ruang putih di bawah gambar */
+      margin: 0 auto;
+      /* Mengatur margin untuk pemosisian tengah secara horizontal */
+      padding: 10px;
+      /* Memberikan jarak antara gambar dan tepi kontainer */
+    }
+  </style>
   <!-- HERO-17
-                                                                                                                                         ============================================= -->
+                                                                                                                                           ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
