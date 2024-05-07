@@ -287,15 +287,15 @@
   <div class="container mt-5">
 
     <div id="brands-1">
-      <div class="row">
+      <div class="row justify-content-center align-items-center">
         <div class="col text-center">
           <div class="owl-carousel brands-carousel-5">
 
             @foreach ($brand as $item)
               <!-- BRAND LOGO IMAGE -->
               <div class="brand-logo">
-                <a href="javascript:void(0);"><img class="img-fluid light-theme-img"
-                    src="{{ asset('storage/assets/image/' . $item->image) }}" width="100px" alt="brand-logo"></a>
+                <a href="javascript:void(0);"><img class="w-100 light-theme-img"
+                    src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo"></a>
               </div>
             @endforeach
 
