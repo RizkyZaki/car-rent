@@ -284,7 +284,7 @@
     </div> <!-- END BLOG POST #1 -->
   </div>
   <div class="container pt-4 pb-5">
-    <div class="text-center">
+    <div class="text-center mb-2">
       <h2>Brand</h2>
     </div>
     <div class="row gx-3 gx-md-4 gy-3 gy-md-4 justify-content-center align-items-center">
