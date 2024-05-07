@@ -35,7 +35,7 @@
               <div class="blog-post-txt">
 
                 <!-- Post Tag -->
-                <span class="post-tag color--pink-400">{{ $item->category->name }}</span>
+                <span class="post-tag color--pink-400">{{ $item->category->name ?? 'Blog' }}</span>
 
                 <!-- Post Link -->
                 <h6 class="s-20 w-700">

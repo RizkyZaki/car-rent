@@ -43,6 +43,7 @@
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Kategori</label>
       <select class="form-select js-select2" name="id_category" data-search="on">
+        <option value="" selected></option>
         @foreach ($category as $item)
           <option value="{{ $item->id }}"
             {{ isset($blog['id_category']) && $blog['id_category'] == $item->id ? 'selected' : '' }}>{{ $item->name }}
