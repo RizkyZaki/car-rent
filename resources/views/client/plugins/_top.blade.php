@@ -55,3 +55,12 @@
 
 <!-- RESPONSIVE CSS -->
 <link href="{{ asset('client/css/responsive.css') }}" rel="stylesheet">
+<style>
+  #faqs-2.faqs-section .accordion-item .accordion-thumb:after,
+  #faqs-2.faqs-section .accordion-item.is-active .accordion-thumb:after {
+    font-size: 1rem;
+    top: 26px;
+    right: 2px;
+    display: none
+  }
+</style>
