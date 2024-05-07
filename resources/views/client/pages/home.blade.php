@@ -205,7 +205,7 @@
 
                   <!-- CATEGORY HEADER -->
                   <div class="accordion-thumb">
-                    <h6 class="s-28 w-700">{{ $item->question }}</h6>
+                    <h6>{{ $item->question }}</h6>
                   </div>
 
 
