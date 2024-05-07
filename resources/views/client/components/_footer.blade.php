@@ -33,7 +33,7 @@
                   Ketentuan</a></p>
             </li>
             <li>
-              <p><a href="{{ url('rentalpedia') }}">Company
+              <p><a href="{{ url('blog/rentalpedia') }}">Company
                   Profile</a></p>
             </li>
             <li>

@@ -40,7 +40,7 @@
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('blog') }}" class="h-link">Blog</a></li>
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('post') }}" class="h-link">Daftar Harga</a>
             </li>
-            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('rentalpedia') }}" class="h-link">Company
+            <li class="nl-simple" aria-haspopup="true"><a href="{{ url('blog/rentalpedia') }}" class="h-link">Company
                 Profile</a>
             </li>
             <li class="nl-simple" aria-haspopup="true"><a href="{{ url('blog/syarat-dan-ketentuan') }}"
