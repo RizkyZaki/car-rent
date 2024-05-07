@@ -5,7 +5,6 @@
 @section('content-client')
   <style>
     .brand-logo img {
-      width: 150px;
       /* Menyesuaikan lebar gambar */
       height: 150px;
       /* Menyesuaikan tinggi gambar */
@@ -18,7 +17,7 @@
     }
   </style>
   <!-- HERO-17
-                                                                                                                                                             ============================================= -->
+                                                                                                                                                               ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
