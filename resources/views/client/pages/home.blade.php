@@ -4,29 +4,13 @@
 @endphp
 @section('content-client')
   <style>
-    .brand-logo {
-      text-align: center;
-      /* Memastikan teks dan gambar berada di tengah */
-      margin-top: 20px;
-      /* Menyesuaikan margin atas */
-    }
-
-    .brand-logo a {
-      display: inline-block;
-      /* Mengubah tautan menjadi blok inline */
-      vertical-align: middle;
-      /* Menyesuaikan tata letak vertikal dengan gambar */
-      text-decoration: none;
-      /* Menghilangkan garis bawah pada tautan */
-      margin-left: 10px;
-      /* Memberikan jarak antara gambar dan teks */
-    }
-
     .brand-logo img {
       width: 150px;
       /* Menyesuaikan lebar gambar */
       height: 150px;
       /* Menyesuaikan tinggi gambar */
+      object-fit: cover;
+      /* Mengatur gambar untuk dipotong atau di-zoom agar sesuai dengan kotak yang telah ditetapkan */
       vertical-align: middle;
       /* Menyesuaikan tata letak vertikal dengan teks */
       margin-bottom: -4px;
@@ -34,7 +18,7 @@
     }
   </style>
   <!-- HERO-17
-                                                                                                                                                           ============================================= -->
+                                                                                                                                                             ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
