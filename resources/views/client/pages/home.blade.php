@@ -4,9 +4,39 @@
 @endphp
 @section('content-client')
   <style>
+    .brand-logo {
+      text-align: center;
+      /* Memastikan teks dan gambar berada di tengah */
+      margin-top: 20px;
+      /* Menyesuaikan margin atas */
+    }
+
+    .brand-logo a {
+      display: inline-block;
+      /* Mengubah tautan menjadi blok inline */
+      vertical-align: middle;
+      /* Menyesuaikan tata letak vertikal dengan gambar */
+      text-decoration: none;
+      /* Menghilangkan garis bawah pada tautan */
+    }
+
+    .brand-logo img {
+      width: 200px;
+      /* Menyesuaikan lebar gambar */
+      max-width: 100%;
+      /* Mengatur lebar maksimum gambar agar tidak melebihi lebar parent */
+      height: auto;
+      /* Memastikan gambar tetap proporsional */
+      display: inline-block;
+      /* Mengubah gambar menjadi blok inline */
+      margin-bottom: -4px;
+      /* Menyesuaikan margin bawah agar serasi dengan teks */
+      padding: 10px;
+      /* Memberikan jarak antara gambar dan tepi kontainer */
+    }
   </style>
   <!-- HERO-17
-                                                                                                                                                     ============================================= -->
+                                                                                                                                                       ============================================= -->
   <section id="hero-17" class="bg--fixed hero-section">
     <div class="container">
 
@@ -54,8 +84,7 @@
                 <!-- BRAND LOGO IMAGE -->
                 <div class="brand-logo">
                   <a href="{{ url('category/' . $item->slug) }}"><img class="img-fluid light-theme-img"
-                      src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo"></a>
-                  <p>{{ $item->name }}</p>
+                      src="{{ asset('storage/assets/image/' . $item->image) }}" alt="brand-logo">{{ $item->name }}</a>
                 </div>
               @endforeach
 
