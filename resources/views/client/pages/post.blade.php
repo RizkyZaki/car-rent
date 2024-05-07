@@ -31,7 +31,11 @@
               <!-- BLOG POST IMAGE -->
               <div class="blog-post-img mb-35">
                 <img class="img-fluid r-16" src="{{ asset('storage/assets/image/' . $item->photo) }}"
-                  alt="blog-post-image">
+                  alt="blog-post-image"
+                  style="
+                  height: 245px;
+                  object-fit: cover;
+              ">
               </div>
 
               <!-- BLOG POST TEXT -->
