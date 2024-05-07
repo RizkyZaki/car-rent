@@ -93,36 +93,33 @@
                   <a href="javascript:void(0);">{{ $item->title }}</a>
 
                 </h6>
-                <div class="text-center">
-
-                  <table style="border-collapse: collapse;">
-                    <tbody>
-                      @foreach ($item->rent as $item)
-                        <tr>
-                          <td>{{ $item->rent }}</td>
-                          <td>: {{ formatIDR($item->fee) }}</td>
-                        </tr>
-                      @endforeach
-                    </tbody>
-                  </table>
+                <table style="border-collapse: collapse;">
+                  <tbody>
+                    @foreach ($item->rent as $item)
+                      <tr>
+                        <td>{{ $item->rent }}</td>
+                        <td>: {{ formatIDR($item->fee) }}</td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
 
 
-                  <!-- Post Meta -->
-                  <div class="blog-post-meta mt-20">
-                    <ul class="post-meta-list ico-10">
+                <!-- Post Meta -->
+                <div class="blog-post-meta mt-20">
+                  <ul class="post-meta-list ico-10">
 
-                      <li>
-                        <a href="javascript:void(0);" class="btn btn--theme hover--theme"><span>&#9733;</span>
-                          5 </a>
-                      </li>
-                      <li>
-                        <a href="https://wa.me/{{ appSetting()->contact_phone }}" target="_blank"
-                          class="btn btn--theme hover--theme w-full"><img src="https://templatenesia.com/wa.png"
-                            width="18" alt="">
-                          Booking Now</a>
-                      </li>
-                    </ul>
-                  </div>
+                    <li>
+                      <a href="javascript:void(0);" class="btn btn--theme hover--theme"><span>&#9733;</span>
+                        5 </a>
+                    </li>
+                    <li>
+                      <a href="https://wa.me/{{ appSetting()->contact_phone }}" target="_blank"
+                        class="btn btn--theme hover--theme w-full"><img src="https://templatenesia.com/wa.png"
+                          width="18" alt="">
+                        Booking Now</a>
+                    </li>
+                  </ul>
                 </div>
                 {{-- <div class="row">
                   @foreach ($benefits as $benefit)
