@@ -43,7 +43,7 @@
               <p><a href="{{ url('blog') }}">Blog</a></p>
             </li>
             <li>
-              <p><a href="{{ url('sitemap') }}">Sitemap</a></p>
+              <p><a href="sitemap.xml">Sitemap</a></p>
             </li>
           </ul>
 
